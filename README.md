@@ -5,8 +5,8 @@ Data visualization giving you a summary or a prediction of the benefits that com
 ## 📊Profile Wide Statistics📊
 
 ![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=ethanw2457&show_icons=true)
-
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=ethanw2457&theme=blue-green)
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=runsey&show_icons=true)
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=shamuyhank&show_icons=true)
 
 
 
