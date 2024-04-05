@@ -15,26 +15,41 @@
       <h2>Event Organizers Sign Up</h2>
       <!-- Event organizers sign up form -->
       <form id="organizerSignupForm">
-        <!-- Form fields -->
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="submit" value="Sign Up">
       </form>
     </section>
     <section id="rideSharing">
       <h2>Ridesharing</h2>
       <!-- Display addresses and map for driver -->
       <div id="pickupAddresses">
-        <!-- Addresses displayed here -->
+        <h3>Pickup Addresses</h3>
+        <ul id="addressesList">
+          <!-- Addresses displayed here -->
+          <li>123 Main St</li>
+          <li>456 Elm St</li>
+        </ul>
       </div>
       <div id="map"></div>
       <!-- Ride request form -->
       <form id="rideRequestForm">
-        <!-- Form fields -->
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <input type="submit" value="Request Ride">
       </form>
       <!-- Ride offers -->
       <div id="rideOffers">
+        <h3>Ride Offers</h3>
         <!-- Display ride offers here -->
+        <ul id="offersList">
+          <li>John Doe - 2 spots available</li>
+          <li>Jane Smith - 1 spot available</li>
+        </ul>
       </div>
     </section>
   </main>
   <script src="script.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" defer></script>
 </body>
 </html>
