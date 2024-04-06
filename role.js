@@ -1,19 +1,16 @@
-// JavaScript for the webpage
+function check() {
+  var checkBox = document.getElementById("checbox");
+  var text1 = document.getElementsByClassName("text1");
+  var text2 = document.getElementsByClassName("text2");
 
-// Event listener for the Event Organizer button
-document.getElementById("eventOrganizerBtn").addEventListener("click", function() {
-  // Redirect to the Event Organizer page
-  window.location.href = "event_organizer.html";
-});
-
-// Event listener for the Scouter button
-document.getElementById("driverBtn").addEventListener("click", function() {
-  // Redirect to the Scouter page
-  window.location.href = "driver.html";
-});
-
-// Event listener for the Carpooler button
-document.getElementById("carpoolerBtn").addEventListener("click", function() {
-  // Redirect to the Carpooler page
-  window.location.href = "carpooler.html";
-});
+  for (var i = 0; i < text1.length; i++) {
+    if (checkBox.checked == true) {
+      text1[i].style.display = "block";
+      text2[i].style.display = "none";
+    } else if (checkBox.checked == false) {
+      text1[i].style.display = "none";
+      text2[i].style.display = "block";
+    }
+  }
+}
+check();
