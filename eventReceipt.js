@@ -1,8 +1,6 @@
 localStorage.setItem("eventname", "Test");
 localStorage.setItem("eventdetails", "Location: somewhere<br>Date: today<br>Time: now");
 localStorage.setItem("eventdesc", "Have fun");
-window.onload = function() {
-  
   document.getElementById("eventname").innerHTML = localStorage.getItem("event");
   document.getElementById("eventdetails").innerHTML = "Location: " + localStorage.getItem("eventaddress") + "<br>Date: " + localStorage.getItem("eventdate");
   document.getElementById("eventdesc").innerHTML = localStorage.getItem("eventdesc");
