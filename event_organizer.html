@@ -123,7 +123,7 @@
   <section>
     <div class='section-img reset-section centrado yellow'>
       
-        <h1> Driver Sign Up </h1>
+        <h1> Event Creation </h1>
     
      <p class='font-w-500'> Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock. </p>
 
@@ -132,24 +132,28 @@
       <div class="container">
         <div class="forms-container">
           <div class="signin-signup">
-            <form action="" class="sign-in-form">
+            <form id="eventform" action="" class="sign-in-form">
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Event Name" />
+                <input id="name" type="text" placeholder="Event Name" />
               </div>
               <div class="input-field">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Organization Email" />
+                <input id="email" type="text" placeholder="Organization Email" />
               </div>
               <div class="input-field">
                 <i class="fas fa-phone"></i>
-                <input type="text" placeholder="Organization Phone" />
+                <input id="phone" type="text" placeholder="Organization Phone" />
               </div>
               <div class="input-field">
                 <i class="fas fa-globe"></i>
-                <input type="text" placeholder="Event Address" />
+                <input id="address" type="text" placeholder="Event Address" />
               </div>
-              <input class='brutal-btn blanco' type="submit" value="Login" class="btn solid" />
+              <div class="input-field">
+                <i class="fas fa-cog"></i>
+                <input id="description" type="text" placeholder="Description Box" />
+              </div>
+              <input class='brutal-btn blanco' type="submit" value="Create" class="btn solid" />
             </form>
           </div>
         </div>

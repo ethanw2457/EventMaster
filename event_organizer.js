@@ -1,6 +1,6 @@
 // JavaScript for the event organizer page
 
-document.getElementById("eventForm").addEventListener("submit", function(event) {
+document.getElementById("eventform").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent default form submission
 
   // Retrieve input values
