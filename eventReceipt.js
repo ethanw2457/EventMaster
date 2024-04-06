@@ -2,14 +2,10 @@ localStorage.setItem("eventname", "Test");
 localStorage.setItem("eventdetails", "Location: somewhere<br>Date: today<br>Time: now");
 localStorage.setItem("eventdesc", "Have fun");
 window.onload = function() {
-  const urlParams = new URLSearchParams(window.location.search);
-  document.getElementById("driver").innerHTML = urlParams.get('driver');
-  document.getElementById("carpooler").innerHTML = urlParams.get('carpooler');
-
-  const event = urlParams.get('event');
-  document.getElementById("eventname").innerHTML = localStorage.getItem(event);
-  document.getElementById("eventdetails").innerHTML = "Location: " + localStorage.getItem(event+"address") + "<br>Date: " + localStorage.getItem(event+"date");
-  document.getElementById("eventdesc").innerHTML = localStorage.getItem(event+"desc");
+  
+  document.getElementById("eventname").innerHTML = localStorage.getItem("event");
+  document.getElementById("eventdetails").innerHTML = "Location: " + localStorage.getItem("eventaddress") + "<br>Date: " + localStorage.getItem("eventdate");
+  document.getElementById("eventdesc").innerHTML = localStorage.getItem("eventdesc");
 }
 
 function initMap() {
