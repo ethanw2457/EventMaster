@@ -42,7 +42,7 @@ document.getElementById("signupform").addEventListener("submit", function(event)
   //localStorage.clear();
   // Assume AJAX call to send login info to server and save in database
   // Redirect to another page after successful login
-  //window.location.href = "/result.html?driver=" + name; // Redirect to event selection page
+  window.location.href = "/eventSelection.html"; // Redirect to event selection page
 });
 
 document.getElementById("signinform").addEventListener("submit", function(event) {
@@ -69,6 +69,7 @@ document.getElementById("signinform").addEventListener("submit", function(event)
   }
   else {
     localStorage.setItem("currentuser", i);
+    window.location.href = "/eventSelection.html";
     // Retrieve
     //document.getElementById("result").innerHTML = localStorage.getItem("user1");
 
