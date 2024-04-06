@@ -1,17 +1,17 @@
-localStorage.setItem("eventname", "Test");
-localStorage.setItem("eventdetails", "Location: somewhere<br>Date: today<br>Time: now");
-localStorage.setItem("eventdesc", "Have fun");
-  document.getElementById("eventname").innerHTML = localStorage.getItem("event");
-  document.getElementById("eventdetails").innerHTML = "Location: " + localStorage.getItem("eventaddress") + "<br>Date: " + localStorage.getItem("eventdate");
-  document.getElementById("eventdesc").innerHTML = localStorage.getItem("eventdesc");
-}
+
+document.getElementById("eventname").innerHTML = localStorage.getItem("event");
+document.getElementById("eventdetails").innerHTML = "Location: " + localStorage.getItem("eventaddress") + "<br>Date: " + localStorage.getItem("eventdate");
+document.getElementById("eventdesc").innerHTML = localStorage.getItem("eventdesc");
+document.getElementById("driver").innerHTML = localStorage.getItem("user" + localStorage.getItem("driver"));
+document.getElementById("carpooler").innerHTML = localStorage.getItem("user" + localStorage.getItem("currentuser"));
+
 
 function initMap() {
   const directionsService = new google.maps.DirectionsService();
   const directionsRenderer = new google.maps.DirectionsRenderer();
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
-    center: { lat: 41.85, lng: -87.65 },
+    center: { lat: 40.686506, lng: -74.570665},
   });
 
   directionsRenderer.setMap(map);
@@ -19,13 +19,19 @@ function initMap() {
 }
 
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+  const waypts = [];
+  waypts.push({
+    location: localStorage.getItem("address"+localStorage.getItem("currentuser")),
+    stopover: true,
+  })
   directionsService
   .route({
     origin: {
-      query: "chicago, il",
+      query: localStorage.getItem("address" + localStorage.getItem("driver")),
     },
+    waypoints: waypts,
     destination: {
-      query: "joplin, mo",
+      query: localStorage.getItem("eventaddress"),
     },
     travelMode: google.maps.TravelMode.DRIVING,
   })
