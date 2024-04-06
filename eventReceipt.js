@@ -7,8 +7,8 @@ window.onload = function() {
   document.getElementById("carpooler").innerHTML = urlParams.get('carpooler');
 
   const event = urlParams.get('event');
-  document.getElementById("eventname").innerHTML = localStorage.getItem(event+"name");
-  document.getElementById("eventdetails").innerHTML = localStorage.getItem(event+"details");
+  document.getElementById("eventname").innerHTML = localStorage.getItem(event);
+  document.getElementById("eventdetails").innerHTML = "Location: " + localStorage.getItem(event+"address") + "<br>Date: " + localStorage.getItem(event+"date");
   document.getElementById("eventdesc").innerHTML = localStorage.getItem(event+"desc");
 }
 

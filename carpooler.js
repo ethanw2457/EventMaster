@@ -13,13 +13,13 @@ sign_in_btn.addEventListener('click', () =>{
 
 // the below is not used but for reference
 document.getElementById("signupform").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent default form submission
-  // Retrieve user input
+  event.preventDefault(); 
+
   const name = document.getElementById("signupname").value.trim();
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("signuppassword").value.trim();
   const address = document.getElementById("address").value.trim();
-  // Validate user input
+
   if (name === "" || email === "" || password === "" || address === "") {
     alert("Please fill in all fields.");
     return;
@@ -36,7 +36,7 @@ document.getElementById("signupform").addEventListener("submit", function(event)
   localStorage.setItem("status" + i, "carpooler");
 
   localStorage.setItem("currentuser", i);
-  // Retrieve
+ 
   //document.getElementById("result").innerHTML = localStorage.getItem("user1");
 
   //localStorage.clear();
@@ -46,11 +46,11 @@ document.getElementById("signupform").addEventListener("submit", function(event)
 });
 
 document.getElementById("signinform").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent default form submission
-  // Retrieve user input
+  event.preventDefault(); 
+ 
   const name = document.getElementById("signinname").value.trim();
   const password = document.getElementById("signinpassword").value.trim();
-  // Validate user input
+
   if (name === "" || password === "") {
     alert("Please fill in all fields.");
     return;
@@ -70,7 +70,7 @@ document.getElementById("signinform").addEventListener("submit", function(event)
   else {
     localStorage.setItem("currentuser", i);
     window.location.href = "/eventSelection.html";
-    // Retrieve
+ 
     //document.getElementById("result").innerHTML = localStorage.getItem("user1");
 
     //localStorage.clear();
