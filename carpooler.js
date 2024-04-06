@@ -69,7 +69,7 @@ document.getElementById("signinform").addEventListener("submit", function(event)
   }
   else {
     localStorage.setItem("currentuser", i);
-    window.location.href = "/eventSelection.html";
+    window.location.href = "./eventSelection.html";
  
     //document.getElementById("result").innerHTML = localStorage.getItem("user1");
 

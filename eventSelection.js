@@ -1,3 +1,8 @@
+document.getElementById("button").addEventListener("click", function(event) {
+  event.preventDefault();
+  window.location.href = "eventReceipt.html";
+})
+
 /*
 const events = [
   { name: "Event 1", date: "2024-04-10", location: "Location 1" },
