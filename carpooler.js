@@ -16,11 +16,12 @@ document.getElementById("signupform").addEventListener("submit", function(event)
   event.preventDefault(); // Prevent default form submission
   // Retrieve user input
   const name = document.getElementById("signupname").value.trim();
-  const email = document.getElementById("emailInput").value.trim();
-
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("signuppassword").value.trim();
+  const address = document.getElementById("address").value.trim();
   // Validate user input
-  if (name === "" || email === "") {
-    alert("Please enter your name and email.");
+  if (name === "" || email === "" || password === "" || address === "") {
+    alert("Please fill in all fields.");
     return;
   }
   var i = 1;
@@ -29,13 +30,52 @@ document.getElementById("signupform").addEventListener("submit", function(event)
   }
   localStorage.setItem("user" + i, name);
   localStorage.setItem("email" + i, email);
+  localStorage.setItem("address" + i, address);
+  localStorage.setItem("password" + i, password);
 
+  //localStorage.setItem("status" + i, localStorage.getItem("currentstatus"));
 
+  localStorage.setItem("currentuser", i);
   // Retrieve
   //document.getElementById("result").innerHTML = localStorage.getItem("user1");
 
   //localStorage.clear();
   // Assume AJAX call to send login info to server and save in database
   // Redirect to another page after successful login
-  window.location.href = "/result.html?driver=" + name; // Redirect to event selection page
+  //window.location.href = "/result.html?driver=" + name; // Redirect to event selection page
+});
+
+document.getElementById("signinform").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent default form submission
+  // Retrieve user input
+  const name = document.getElementById("signinname").value.trim();
+  const password = document.getElementById("signinpassword").value.trim();
+  // Validate user input
+  if (name === "" || password === "") {
+    alert("Please fill in all fields.");
+    return;
+  }
+  var i = 1;
+  while (localStorage.getItem("user" + i) !== null && localStorage.getItem("user"+i) != name) {
+    i++;
+  }
+  if (localStorage.getItem("user" + i) === null) {
+    alert("Invalid username or password.");
+    return;
+  }
+  else if (localStorage.getItem("password" + i) != password) {
+    alert("Invalid username or password.");
+    return;
+  }
+  else {
+    localStorage.setItem("currentuser", i);
+    // Retrieve
+    //document.getElementById("result").innerHTML = localStorage.getItem("user1");
+
+    //localStorage.clear();
+    // Assume AJAX call to send login info to server and save in database
+    // Redirect to another page after successful login
+    //window.location.href = "/result.html?driver=" + name; // Redirect to event selection page
+  }
+
 });

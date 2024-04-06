@@ -1,41 +1,82 @@
-/* Stylesheet for the event selection page */
-body {
-  font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700|Work+Sans');
+
+* {
   margin: 0;
   padding: 0;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
+h1,h2,h3 {
+  font-family: 'Space Mono';
 }
 
-main {
-  padding: 2rem;
+body {
+  border-left: 10px solid yellow;
+  border-right: 10px solid yellow;
 }
 
-section {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  margin-bottom: 1rem;
+li,a,p,button {
+  font-family: 'Work Sans';
+  color: black;
+  text-decoration: none;
+  list-style: none;
 }
 
 button {
-  display: block;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+  border-radius: none;
+  padding: 5px 20px;
+  background: white;
+  border: 2px solid black;
+  font-size: 1.1rem;
+
 }
 
-button:hover {
-  background-color: #555;
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
 }
 
-/* Additional styles can be added as needed */
+.latest-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.latest-grid-item {
+  flex-basis: calc(30% - 10px);
+  margin: 20px 0;
+  border: 2px solid black;
+}
+
+.latest-grid-item h2,h3,p,hr,button {
+  margin: 1rem ;
+}
+
+.latest-grid-item h3 {
+  color: #aaa;
+}
+
+.latest-grid-item img {
+  width: 100%;
+  height: 200px;
+}
+
+.latest {
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .latest-grid-item {
+      flex-basis: calc(45% - 10px);
+  }
+}
+
+
+@media (max-width: 550px) {
+  .latest-grid-item {
+      flex-basis: 100%;
+  }
+}
