@@ -2,8 +2,12 @@
 document.getElementById("eventname").innerHTML = localStorage.getItem("event");
 document.getElementById("eventdetails").innerHTML = "Location: " + localStorage.getItem("eventaddress") + "<br>Date: " + localStorage.getItem("eventdate");
 document.getElementById("eventdesc").innerHTML = localStorage.getItem("eventdesc");
-document.getElementById("driver").innerHTML = localStorage.getItem("user" + localStorage.getItem("driver"));
-document.getElementById("carpooler").innerHTML = localStorage.getItem("user" + localStorage.getItem("currentuser"));
+const drivernum = localStorage.getItem("driver");
+const cpnum = localStorage.getItem("currentuser");
+document.getElementById("driver").innerHTML = localStorage.getItem("user" + drivernum);
+document.getElementById("driverinfo").innerHTML = "Driver" + "<br>" + localStorage.getItem("phone" + drivernum) + "<br>" + localStorage.getItem("email" + drivernum) + "<br>" + localStorage.getItem("address" + drivernum);
+document.getElementById("carpoolerinfo").innerHTML = "Carpooler" + "<br>" + localStorage.getItem("email" + cpnum) + "<br>" + localStorage.getItem("address" + cpnum);
+document.getElementById("carpooler").innerHTML = localStorage.getItem("user" + cpnum);
 
 
 function initMap() {
