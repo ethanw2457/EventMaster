@@ -267,8 +267,8 @@ svg{
 .container {
   position: relative;
   width: 100%;
-  background-color: #fff;
-  min-height: 100vh;
+  background-color: #FFED4F;
+  min-height: 32vh;
   overflow: hidden;
 }
 
@@ -284,7 +284,7 @@ svg{
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  left: 75%;
+  left: 50%;
   width: 50%;
   transition: 1s 0.7s ease-in-out;
   display: grid;
