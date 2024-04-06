@@ -1,4 +1,4 @@
-
+/*
 const events = [
   { name: "Event 1", date: "2024-04-10", location: "Location 1" },
   { name: "Event 2", date: "2024-04-15", location: "Location 2" },
@@ -23,3 +23,4 @@ function createEventButtons() {
 
 
 window.addEventListener("load", createEventButtons);
+*/
