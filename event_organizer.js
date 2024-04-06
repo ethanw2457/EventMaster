@@ -1,6 +1,5 @@
 document.getElementById("eventform").addEventListener("submit", function(event) {
   event.preventDefault(); 
-  window.location.href = "eventSelection.html";
 
   const name = document.getElementById("name").value.trim();
   const date = document.getElementById("date").value.trim();
@@ -12,19 +11,16 @@ document.getElementById("eventform").addEventListener("submit", function(event) 
     alert("Please fill in all fields.");
     return;
   }
-  var i = 1;
-  while (localStorage.getItem("event" + i) !== null) {
-    i++;
-  }
-  localStorage.setItem("event" + i, name)
-  localStorage.setItem("event" + i + "date", date);
-  localStorage.setItem("event" + i + "address", address);
-  localStorage.setItem("event" + i + "desc", desc);
+  
+  localStorage.setItem("event", name)
+  localStorage.setItem("eventdate", date);
+  localStorage.setItem("eventaddress", address);
+  localStorage.setItem("eventdesc", desc);
   
 
 
   alert("Event added successfully!");
 
 
-  window.location.href = "eventSelection.html";
+  window.location.href = "./index.html";
 });
