@@ -33,7 +33,7 @@ document.getElementById("signupform").addEventListener("submit", function(event)
   localStorage.setItem("address" + i, address);
   localStorage.setItem("password" + i, password);
 
-  //localStorage.setItem("status" + i, localStorage.getItem("currentstatus"));
+  localStorage.setItem("status" + i, "carpooler");
 
   localStorage.setItem("currentuser", i);
   // Retrieve

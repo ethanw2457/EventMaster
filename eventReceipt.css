@@ -16,6 +16,11 @@
   --border-radius: 30px;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
 /*=============== SCROLLBAR ===============*/
 
 ::-webkit-scrollbar {
