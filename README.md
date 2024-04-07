@@ -4,10 +4,11 @@ Using data visualization to show how various decisions, like mode of transportat
 ## 📊Profile Wide Statistics📊
 
 ![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=ethanw2457&show_icons=true)
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=runsey&show_icons=true)
 ![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=shamuyhank&show_icons=true)
 
 
 
 ## 😂Random Joke for visiting this ReadMe!😂
 ![Jokes Card](https://readme-jokes.vercel.app/api)
+
+Needs Google API Key to run again after a long time
