@@ -3,7 +3,7 @@ Having both come from musical backgrounds, we both know the late nights, early m
 
 Using data visualization to show how various decisions, like mode of transportation, affect the environment, and providing workable solutions like carpooling apps and directories of environmentally conscious companies helps create a sustainable environment one step at a time. Through our Green Food Explorer clients are able to make a more informed decision on where they want to eat while also helping support green businesses. With GreenPool, locals from a community can take advantage of a trusted service to carpool with friends and family to mutual events. Green Assistant helps traveling groups make better decisions on where they want to go for vacation by telling them of the reputation of the company, the pollution costs, and more! These initiatives underscore a commitment to environmental stewardship and fostering a more sustainable future.
 
-Created for [RidgeHacks 2024](https://devpost.com/software/eventmaster-tl5ju1) in person Hackathon New Jersey
+Created for [RidgeHacks 2024](https://devpost.com/software/eventmaster-tl5ju1) in person Ridge High School Hackathon New Jersey
 
 ## 📊Profile Wide Statistics📊
 
